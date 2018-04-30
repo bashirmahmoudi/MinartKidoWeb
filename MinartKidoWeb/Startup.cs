@@ -37,7 +37,7 @@ namespace MinartKidoWeb
                 });
             services.AddMvc(properties =>
             {
-                properties.ModelBinderProviders.Insert(0,new JsonModelBinderProvider());
+                // properties.ModelBinderProviders.Insert(0,new JsonModelBinderProvider());
             });
         }
 

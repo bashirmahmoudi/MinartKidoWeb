@@ -1,6 +1,5 @@
 ﻿using System;
 using System.IdentityModel.Tokens.Jwt;
-using System.Net.WebSockets;
 using System.Security.Claims;
 using System.Text;
 using Microsoft.AspNetCore.Authorization;
@@ -8,7 +7,6 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
 using MinartKidoWebDataAccess.Model.Authentication;
-using Microsoft.AspNetCore.Http;
 
 namespace MinartKidoWeb.Controllers
 {
@@ -61,7 +59,7 @@ namespace MinartKidoWeb.Controllers
         private UserDto Authenticate(Login login)
         {
             UserDto user = null;
-            if (login.Username == "admin" && login.Password == "secret")
+            if (login.Username == "admin" && login.Password == "1")
             {
                 user = new UserDto
                 {
